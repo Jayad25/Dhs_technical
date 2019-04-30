@@ -1,0 +1,17 @@
+<h2>New System</h2>
+
+<form action="<%= systems_url %>" method="post">
+
+
+  <label>
+    Name
+    <input type="text" name="system[name]" value="<%= @system.name %>" id="name">
+  </label>
+<br>
+  <label>
+    Radius
+    <input type="number" name="system[radius]" value="<%= @system.radius %>" id="radius">
+  </label>
+<br>
+  <input type="submit" value="Create New System">
+</form>

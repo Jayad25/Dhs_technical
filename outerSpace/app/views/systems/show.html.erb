@@ -1,0 +1,6 @@
+<h1><%= @system.name%></h1>
+ <% @system.ships.each do |ship| %>
+ <li><a href="<%= ship_url(ship) %>"><%= ship.name %></a>
+  <a href="<%= edit_ship_url(ship)%>">Edit</a
+ </li>
+ <% end %>

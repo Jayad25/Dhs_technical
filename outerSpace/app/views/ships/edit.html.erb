@@ -1,0 +1,26 @@
+<h2>New Ship</h2>
+
+<form action="<%= ship_url(@ship) %>" method="post">
+ <input type="hidden" name="_method" value="patch">
+
+  <label>
+    Name
+    <input type="text" name="ship[name]" value="<%= @ship.name %>" id="name">
+  </label>
+<<br>
+  <label>
+    Velocity
+    <input type="number" name="ship[velocity]" value="<%= @ship.velocity %>" id="Velocity">
+  </label>
+  <select  name="ship[system_id]">
+        <% System.all.each do |system| %>
+            <option
+
+                value="<%= system.id %>">
+                <%= system.name %>
+            </option>
+        <% end %>
+    </select>
+<br>
+  <input type="submit" value="Update ship">
+</form>

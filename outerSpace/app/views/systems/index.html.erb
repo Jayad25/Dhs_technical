@@ -1,0 +1,13 @@
+
+
+<h2>All Systems</h2>
+<% @systems.each do |system| %>
+<ul>
+  System:<a href="<%= system_url(system) %>"><%= system.name %></a>
+  <br>
+     <% system.ships.each do |ship| %>
+        <li><%= ship.name%></li>
+        <% end %>
+
+</ul>
+<% end %>

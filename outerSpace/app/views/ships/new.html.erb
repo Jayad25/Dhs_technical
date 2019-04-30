@@ -1,0 +1,30 @@
+<h2>New Ship</h2>
+
+<form action="<%= ships_url %>" method="post">
+
+
+  <label>
+    Name
+    <input type="text" name="ship[name]" value="<%= @ship.name %>" id="name">
+  </label>
+<br>
+  <label>
+    Velocity
+    <input type="number" name="ship[velocity]" value="<%= @ship.velocity %>" id="Velocity">
+  </label>
+  <br>
+  <label>
+    System:
+  <select  name="ship[system_id]">
+        <% System.all.each do |system| %>
+            <option
+
+                value="<%= system.id %>">
+                <%= system.name %>
+            </option>
+        <% end %>
+    </select>
+    </label>
+<br>
+  <input type="submit" value="Create New ship">
+</form>

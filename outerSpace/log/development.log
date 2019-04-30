@@ -2489,3 +2489,233 @@ Processing by ShipsController#new as HTML
 Completed 200 OK in 71ms (Views: 39.2ms | ActiveRecord: 30.5ms)
 
 
+  [1m[35m (83.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (406.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (7708.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "outerSpace_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (2802.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "outerSpace_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (763.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "outerSpace_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (28830.5ms)[0m  [1m[35mCREATE DATABASE "outerSpace_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (16019.9ms)[0m  [1m[35mCREATE DATABASE "outerSpace_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (6.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (19.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "ships" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (49.0ms)[0m  [1m[35mCREATE TABLE "ships" ("id" bigserial primary key, "name" character varying NOT NULL, "velocity" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "system_id" integer)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE  INDEX  "index_ships_on_name" ON "ships"  ("name")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_ships_on_velocity" ON "ships"  ("velocity")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "systems" CASCADE[0m
+  ↳ db/schema.rb:28
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "systems" ("id" bigserial primary key, "name" character varying NOT NULL, "radius" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:28
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_systems_on_name" ON "systems"  ("name")[0m
+  ↳ db/schema.rb:28
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_systems_on_radius" ON "systems"  ("radius")[0m
+  ↳ db/schema.rb:28
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190430165321)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190430163449),
+(20190430163438);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (44.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-30 20:18:08.077159"], ["updated_at", "2019-04-30 20:18:08.077159"]]
+  ↳ db/schema.rb:13
+  [1m[35m (40.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (1.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "ships" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (33.6ms)[0m  [1m[35mCREATE TABLE "ships" ("id" bigserial primary key, "name" character varying NOT NULL, "velocity" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "system_id" integer)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE  INDEX  "index_ships_on_name" ON "ships"  ("name")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_ships_on_velocity" ON "ships"  ("velocity")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "systems" CASCADE[0m
+  ↳ db/schema.rb:28
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "systems" ("id" bigserial primary key, "name" character varying NOT NULL, "radius" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:28
+  [1m[35m (42.2ms)[0m  [1m[35mCREATE  INDEX  "index_systems_on_name" ON "systems"  ("name")[0m
+  ↳ db/schema.rb:28
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_systems_on_radius" ON "systems"  ("radius")[0m
+  ↳ db/schema.rb:28
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190430165321)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190430163449),
+(20190430163438);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-30 20:18:08.373737"], ["updated_at", "2019-04-30 20:18:08.373737"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-04-30 20:18:08.379468"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mShip Load (1.1ms)[0m  [1m[34mSELECT "ships".* FROM "ships"[0m
+  ↳ db/seeds.rb:8
+  [1m[36mSystem Load (2.3ms)[0m  [1m[34mSELECT "systems".* FROM "systems"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mSystem Create (1.2ms)[0m  [1m[32mINSERT INTO "systems" ("name", "radius", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "milkiway1"], ["radius", 10], ["created_at", "2019-04-30 20:18:08.564642"], ["updated_at", "2019-04-30 20:18:08.564642"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSystem Create (0.4ms)[0m  [1m[32mINSERT INTO "systems" ("name", "radius", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "kepler"], ["radius", 11], ["created_at", "2019-04-30 20:18:08.568476"], ["updated_at", "2019-04-30 20:18:08.568476"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mSystem Create (0.4ms)[0m  [1m[32mINSERT INTO "systems" ("name", "radius", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "rock"], ["radius", 100], ["created_at", "2019-04-30 20:18:08.571020"], ["updated_at", "2019-04-30 20:18:08.571020"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mSystem Load (0.4ms)[0m  [1m[34mSELECT  "systems".* FROM "systems" WHERE "systems"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mShip Create (0.9ms)[0m  [1m[32mINSERT INTO "ships" ("name", "velocity", "created_at", "updated_at", "system_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Enterprice"], ["velocity", 1000], ["created_at", "2019-04-30 20:18:08.594402"], ["updated_at", "2019-04-30 20:18:08.594402"], ["system_id", 1]]
+  ↳ db/seeds.rb:14
+  [1m[35m (40.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mSystem Load (0.4ms)[0m  [1m[34mSELECT  "systems".* FROM "systems" WHERE "systems"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mShip Create (0.4ms)[0m  [1m[32mINSERT INTO "ships" ("name", "velocity", "created_at", "updated_at", "system_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Houston"], ["velocity", 2000], ["created_at", "2019-04-30 20:18:08.639381"], ["updated_at", "2019-04-30 20:18:08.639381"], ["system_id", 1]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mSystem Load (0.3ms)[0m  [1m[34mSELECT  "systems".* FROM "systems" WHERE "systems"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mShip Create (0.4ms)[0m  [1m[32mINSERT INTO "ships" ("name", "velocity", "created_at", "updated_at", "system_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Austin"], ["velocity", 4000], ["created_at", "2019-04-30 20:18:08.643434"], ["updated_at", "2019-04-30 20:18:08.643434"], ["system_id", 2]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mSystem Load (0.3ms)[0m  [1m[34mSELECT  "systems".* FROM "systems" WHERE "systems"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mShip Create (0.4ms)[0m  [1m[32mINSERT INTO "ships" ("name", "velocity", "created_at", "updated_at", "system_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Dallas"], ["velocity", 5000], ["created_at", "2019-04-30 20:18:08.647389"], ["updated_at", "2019-04-30 20:18:08.647389"], ["system_id", 3]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mSystem Load (0.4ms)[0m  [1m[34mSELECT  "systems".* FROM "systems" WHERE "systems"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mShip Create (0.6ms)[0m  [1m[32mINSERT INTO "ships" ("name", "velocity", "created_at", "updated_at", "system_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "San Antonio"], ["velocity", 8000], ["created_at", "2019-04-30 20:18:08.651569"], ["updated_at", "2019-04-30 20:18:08.651569"], ["system_id", 3]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+Started GET "/" for ::1 at 2019-04-30 13:19:47 -0700
+Started GET "/systems" for ::1 at 2019-04-30 13:19:50 -0700
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/swapnadammalapati/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  [1m[35m (55.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/swapnadammalapati/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/swapnadammalapati/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/swapnadammalapati/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (4.5ms)
+Completed 200 OK in 39ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Processing by SystemsController#index as HTML
+  Rendering systems/index.html.erb within layouts/application
+  [1m[36mSystem Load (1.7ms)[0m  [1m[34mSELECT "systems".* FROM "systems"[0m
+  ↳ app/views/systems/index.html.erb:4
+  [1m[36mShip Load (1.8ms)[0m  [1m[34mSELECT "ships".* FROM "ships" WHERE "ships"."system_id" = $1[0m  [["system_id", 1]]
+  ↳ app/views/systems/index.html.erb:8
+  [1m[36mShip Load (0.5ms)[0m  [1m[34mSELECT "ships".* FROM "ships" WHERE "ships"."system_id" = $1[0m  [["system_id", 2]]
+  ↳ app/views/systems/index.html.erb:8
+  [1m[36mShip Load (0.5ms)[0m  [1m[34mSELECT "ships".* FROM "ships" WHERE "ships"."system_id" = $1[0m  [["system_id", 3]]
+  ↳ app/views/systems/index.html.erb:8
+  Rendered systems/index.html.erb within layouts/application (83.5ms)
+Completed 200 OK in 409ms (Views: 375.2ms | ActiveRecord: 22.7ms)
+
+
+Started GET "/systems/1" for ::1 at 2019-04-30 13:19:57 -0700
+Processing by SystemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSystem Load (0.7ms)[0m  [1m[34mSELECT  "systems".* FROM "systems" WHERE "systems"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/systems_controller.rb:21
+  Rendering systems/show.html.erb within layouts/application
+  [1m[36mShip Load (0.4ms)[0m  [1m[34mSELECT "ships".* FROM "ships" WHERE "ships"."system_id" = $1[0m  [["system_id", 1]]
+  ↳ app/views/systems/show.html.erb:2
+  Rendered systems/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 35ms (Views: 30.7ms | ActiveRecord: 1.1ms)
+
+
